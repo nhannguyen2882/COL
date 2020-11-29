@@ -26,7 +26,7 @@ public class PlayerAnimator : MonoBehaviour
             {
                 //anima.SetInteger("status", 4);
                 status = 4;
-                if (Input.GetKey(KeyCode.Space) && jump == false)
+                if (Input.GetKey(KeyCode.Space))
                 {
                     //anima.SetInteger("status", 2);
                     status = 2;
@@ -40,7 +40,7 @@ public class PlayerAnimator : MonoBehaviour
 
             }
 
-            if (Input.GetKey(KeyCode.Space) && jump == false)
+            if (Input.GetKey(KeyCode.Space))
             {
                 //anima.SetInteger("status", 2);
                 status = 2;
@@ -52,7 +52,7 @@ public class PlayerAnimator : MonoBehaviour
                 status = 3;
             }
         }
-        else if (Input.GetKey(KeyCode.Space) && jump == false)
+        else if (Input.GetKey(KeyCode.Space))
         {
             //anima.SetInteger("status", 2);
             status = 2;
