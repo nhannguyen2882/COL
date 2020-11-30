@@ -8,6 +8,7 @@ public class EnemySpawn : MonoBehaviour
 	public GameObject[] spawnEnemy;
 	public int spawnRate = 5;
 	public int startX = -180, endX = 10;
+	public int startY = 0, endY = 7;
 	bool isSpawn = false;
 	GameObject enemy;
 	public Tilemap tileMap;
@@ -30,6 +31,9 @@ public class EnemySpawn : MonoBehaviour
 			}
 		}
 	}
+	void Update(){
+
+	}
 	
 	void OnTriggerEnter2D (Collider2D collider)
 	{
@@ -39,15 +43,22 @@ public class EnemySpawn : MonoBehaviour
 			
             System.Random random = new System.Random();
 			int indexEnemy;
+			int x, y;
+			Vector3 position;
 			for (int i =0;i<spawnRate;i++)
             {
 				indexEnemy = Random.Range(0, spawnEnemy.Length);
-				Vector3 position = new Vector3(Random.Range(startX, endX), Random.Range(0, 20), 0);
+				x = Random.Range(startX, endX);
+				y = Random.Range(startY, endY);
+				position = new Vector3(x, y, 0);
 				while (availablePlaces.Contains(position))
 				{
-					position = new Vector3(Random.Range(startX, endX), Random.Range(0, 20), 0);
+					x = Random.Range(startX, endX);
+					y = Random.Range(startY, endY);
+					position = new Vector3(x, y, 0);
 				}
-				Instantiate(spawnEnemy[indexEnemy], position
+				Debug.Log(position.ToString());
+				Instantiate(spawnEnemy[indexEnemy], new Vector2(position.x,position.y)
 						 ,
 						 Quaternion.identity);
 			}
