@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Creep : MonoBehaviour
 {
@@ -8,12 +9,15 @@ public class Creep : MonoBehaviour
     public int maxHealth = 100;
     int currentHealt;
 
+
     public HealthBar healthBar;
     // Start is called before the first frame update
     void Start()
     {
         currentHealt = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
+        
     }
 
     public void TakeDamage(int damage)
@@ -36,4 +40,5 @@ public class Creep : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
     }
+
 }
