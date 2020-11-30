@@ -21,6 +21,7 @@ public class PlayerMovement2 : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftShift))
         {
             horizontalMove = Input.GetAxisRaw("Horizontal") * speed * 1.5f;
+            Debug.Log("Is moving");
         }
     }
 
