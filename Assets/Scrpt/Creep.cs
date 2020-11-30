@@ -9,15 +9,12 @@ public class Creep : MonoBehaviour
     public int maxHealth = 100;
     int currentHealt;
 
-
     public HealthBar healthBar;
     // Start is called before the first frame update
     void Start()
     {
         currentHealt = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-
-        
     }
 
     public void TakeDamage(int damage)
@@ -40,5 +37,12 @@ public class Creep : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
     }
+
+    /*private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Onstay");
+        healthBar.SetMaxHealth(0);
+       
+    }*/
 
 }

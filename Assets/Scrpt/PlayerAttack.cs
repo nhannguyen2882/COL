@@ -11,6 +11,7 @@ public class PlayerAttack : MonoBehaviour
     public int playerDamage;
     public float attackRate = 2f;
     float nextAttackTime = 0f;
+
     // Update is called once per frame
     void Update()
     {

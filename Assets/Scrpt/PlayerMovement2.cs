@@ -11,6 +11,16 @@ public class PlayerMovement2 : MonoBehaviour
     public float speed = 30f;
     private bool jump = false;
 
+    public int maxHealth = 100;
+    int currentHealt;
+
+    public HealthBar healthBar;
+    void Start()
+    {
+        currentHealt = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -30,4 +40,12 @@ public class PlayerMovement2 : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
     }
+
+    /*private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(co.tag == "FallWall")
+        {
+            healthBar.SetMaxHealth(0);
+        }
+    }*/
 }
