@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-
+using UnityEngine.UI;
 public class Creep : MonoBehaviour
 {
     public Animator animator;
@@ -10,6 +10,7 @@ public class Creep : MonoBehaviour
     int currentHealt;
 
     public HealthBar healthBar;
+    public int creepScore;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,13 +27,13 @@ public class Creep : MonoBehaviour
         if(currentHealt <= 0)
         {
             healthBar.SetHealth(0);
+            scoreText.score += creepScore;
             Die();
         }
     }
 
     void Die()
     {
-        Debug.Log("Enemy died");
         animator.SetBool("isDead",true);
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;

@@ -41,11 +41,12 @@ public class PlayerMovement2 : MonoBehaviour
         jump = false;
     }
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(co.tag == "FallWall")
-        {
-            healthBar.SetMaxHealth(0);
+        Debug.Log("Collision: " + collision.tag);
+        if (collision.tag == "DeathZone") {
+            currentHealt = 0;
+            healthBar.SetHealth(currentHealt);
         }
     }*/
 }
