@@ -12,6 +12,13 @@ public class PlayerAttack : MonoBehaviour
     public float attackRate = 2f;
     float nextAttackTime = 0f;
 
+    private AudioSource attackSound;
+
+    void Start()
+    {
+        attackSound = GetComponent<AudioSource>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -21,6 +28,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
+                attackSound.Play();
             }
         }
         

@@ -17,10 +17,13 @@ public class PlayerMovement2 : MonoBehaviour
     public HealthBar healthBar;
 
     public Rigidbody2D rb;
+
+    private AudioSource jumpSound;
     void Start()
     {
         currentHealt = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        jumpSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -29,6 +32,7 @@ public class PlayerMovement2 : MonoBehaviour
         horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
         if (Input.GetButtonDown("Jump")){
             jump = true;
+            jumpSound.Play();
         }
         if(Input.GetKey(KeyCode.LeftShift))
         {
