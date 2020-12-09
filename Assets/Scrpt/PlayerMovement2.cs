@@ -15,6 +15,8 @@ public class PlayerMovement2 : MonoBehaviour
     int currentHealt;
 
     public HealthBar healthBar;
+
+    public Rigidbody2D rb;
     void Start()
     {
         currentHealt = maxHealth;
@@ -39,14 +41,20 @@ public class PlayerMovement2 : MonoBehaviour
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
+
+        if(rb.position.y < -10f || currentHealt <= 0)
+        {
+            RestartMenu.isDead = true;
+        }
     }
 
-    /*private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision: " + collision.tag);
-        if (collision.tag == "DeathZone") {
-            currentHealt = 0;
+        if(collision.collider.tag == "enemy")
+        {
+            currentHealt -= 5;
             healthBar.SetHealth(currentHealt);
         }
-    }*/
+    }
+
 }
