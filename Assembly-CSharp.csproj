@@ -95,6 +95,8 @@
      <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Shared\Scripts\MixingCameraBlend.cs" />
      <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Scenes\Anywhere Door\PlayerMovement.cs" />
      <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Shared\Models\UnityCharacter\Scripts\CharacterMovement.cs" />
+     <Compile Include="Assets\Scrpt\WinMenu.cs" />
+     <Compile Include="Assets\Scrpt\PlayerWin.cs" />
      <None Include="Assets\2D Animated Pirate\readMe.txt" />
      <None Include="Assets\Free Pixel Art Hills\contact.txt" />
      <None Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Scenes\Anywhere Door\ScreenCutoutShader.shader" />

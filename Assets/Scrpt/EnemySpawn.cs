@@ -61,7 +61,7 @@ public class EnemySpawn : MonoBehaviour
 				Spawn(startX,endX,spawnRate);
 			}else{
 				startX = 40;
-				endX = 23;
+				endX = 123;
 				Spawn(startX,endX,spawnRate);
 			}
 
@@ -92,7 +92,9 @@ public class EnemySpawn : MonoBehaviour
 				p2 = new Vector3(x, y + 2, 0);
 			}
 			Debug.Log(position.ToString());
+			spawnEnemy[indexEnemy].SetActive(true);
 			Instantiate(spawnEnemy[indexEnemy], new Vector2(position.x,position.y),Quaternion.identity);
+			spawnEnemy[indexEnemy].SetActive(false);
 		}
 	}
 }
