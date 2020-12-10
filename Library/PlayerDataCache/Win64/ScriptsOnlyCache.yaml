@@ -6,7 +6,6 @@ ScriptsOnlyBuild:
     - EnemyGFX
     - EnemySpawn
     - HealthBar
-    - MouseController
     - PauseMenu
     - PlayerAnimator
     - PlayerAttack
@@ -35,6 +34,8 @@ ScriptsOnlyBuild:
     - UnityEngine.U2D.SpriteShapeController
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -226,8 +227,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15096}
     - Class: 114
       Script: {instanceID: 15150}
-    - Class: 114
-      Script: {instanceID: 15214}
     - Class: 114
       Script: {instanceID: 15696}
     - Class: 114
