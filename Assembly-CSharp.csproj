@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\PauseMenu\SettingMenu.cs" />
      <Compile Include="Assets\Scrpt\PlayerMovement2.cs" />
+     <Compile Include="Assets\Scrpt\WinMenu.cs" />
      <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Scenes\Scripting\ScriptingExample.cs" />
      <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Scenes\CameraMagnets\CameraMagnetProperty.cs" />
      <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Shared\Scripts\ActivateCameraWithDistance.cs" />
@@ -68,6 +69,7 @@
      <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Scenes\CameraMagnets\CameraMagnetTargetController.cs" />
      <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Shared\Models\UnityCharacter\Scripts\CharacterMovement2D.cs" />
      <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Scenes\Anywhere Door\TagChanger.cs" />
+     <Compile Include="Assets\Scrpt\PlayerWin.cs" />
      <Compile Include="Assets\Scrpt\EnemySpawn.cs" />
      <Compile Include="Assets\Menu\MenuScripts\MenuController.cs" />
      <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Shared\Scripts\PlayerMoveOnSphere.cs" />
@@ -95,8 +97,6 @@
      <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Shared\Scripts\MixingCameraBlend.cs" />
      <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Scenes\Anywhere Door\PlayerMovement.cs" />
      <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Shared\Models\UnityCharacter\Scripts\CharacterMovement.cs" />
-     <Compile Include="Assets\Scrpt\WinMenu.cs" />
-     <Compile Include="Assets\Scrpt\PlayerWin.cs" />
      <None Include="Assets\2D Animated Pirate\readMe.txt" />
      <None Include="Assets\Free Pixel Art Hills\contact.txt" />
      <None Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Scenes\Anywhere Door\ScreenCutoutShader.shader" />
